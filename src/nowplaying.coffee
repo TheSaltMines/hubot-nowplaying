@@ -28,6 +28,7 @@ nowPlaying = (msg) ->
             else
               song = result.song
             msg.send "*#{song.title}* by _#{song.artist}_ is currently playing on Radio Paradise: #{song.coverart}"
+            msg.send "What are people saying about this song? http://www.radioparadise.com/rp_2.php#name=Music&file=songinfo&song_id=#{song.songid}"
 
 thenPlaying = (msg) ->
   query = encodeURIComponent(msg.match[1])
